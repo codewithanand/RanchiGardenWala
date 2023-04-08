@@ -1,0 +1,42 @@
+@import "../../style.scss";
+
+.navbar{
+    @include themify($themes){
+        background-color: themed("bg");
+        color: themed("textColor");
+        border-bottom: 1px solid themed("border");
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        .logo{
+            .logoText{
+                cursor: pointer;
+                font-weight: bold;
+                font-size: 20px;
+                text-decoration: none;
+                color: themed("logo");
+            }
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+        }
+        .links{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: themed("textColor");
+            .linkItem{
+                cursor: pointer;
+                font-weight: 500;
+                a{
+                    text-decoration: none;
+                    color: themed("textColor");
+                }
+            }
+        }
+    }
+}
