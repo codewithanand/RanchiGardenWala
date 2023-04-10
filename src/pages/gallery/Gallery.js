@@ -10,8 +10,8 @@ const Gallery = () => {
     const galleryItem = allPictures.map(item => 
         <div className="galleryItem" key={item.id}>
             <Link to={`/gallery/view/${item.id}`}>
-                <img src={item.url} alt="" />
-                <dev className="title">{item.title}</dev>
+                <img src={`/upload/${item.url}`} alt="" />
+                <div className="title">{item.title}</div>
             </Link>
         </div>
     )
