@@ -1,0 +1,41 @@
+@import "../../style.scss";
+
+.gallery{
+    @include themify($themes){
+        background-color: themed("bg");
+        color: themed("textColor");
+        padding: 50px 0;
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;        
+        .galleryContainer{
+            max-width: 1024px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 50px;
+            .galleryItem{
+                cursor: pointer;
+                width: 300px;
+                height: 300px;
+                padding: 20px;
+                border-radius: 10px;
+                overflow: hidden;
+                text-decoration: none;
+                background-color: themed("bgSoft");
+                img{
+                    width: 100%;
+                    object-fit: cover;
+                    margin-bottom: 10px;
+                }
+                .title{
+                    font-size: small;
+                    text-decoration: none;
+                    color: themed("textColorSoft");
+                }
+            }
+        }
+    }
+}
